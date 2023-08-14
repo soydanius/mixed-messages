@@ -1,8 +1,4 @@
-console.log(
-  `"Loremimspue ijsjape ehena." - Abraham Lincoln (President of the United States)`
-);
-
-const quote = [
+const quotes = [
   "I'm not here to be perfect, I'm here to be real.",
   "I'm not interested in money. I just want to be wonderful.",
   "Success is not final, failure is not fatal: It is the courage to continue that counts.",
@@ -24,7 +20,7 @@ const quote = [
   "I find your lack of faith disturbing.",
 ];
 
-const author = [
+const authors = [
   "Lady Gaga",
   "Marilyn Monroe",
   "Winston Churchill",
@@ -47,7 +43,7 @@ const author = [
   "Darth Vader",
 ];
 
-const role = [
+const roles = [
   "American singer and songwriter",
   "American actress and model",
   "Prime Minister of the United Kingdom",
@@ -68,3 +64,16 @@ const role = [
   "The Dark Knight",
   "Star Wars: Episode IV – A New Hope",
 ];
+
+/////////////////// FUNCTION ////////////////////////////
+
+const randomQuote = () => {
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  const author = authors[Math.floor(Math.random() * authors.length)];
+  const role = roles[Math.floor(Math.random() * roles.length)];
+
+  console.log("Enjoy your 100% accurate quote:");
+  console.log(`"${quote}" - ${author} (${role})`);
+};
+
+randomQuote();
